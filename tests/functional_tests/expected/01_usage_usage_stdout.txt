@@ -1,0 +1,29 @@
+usage: powercounter [-h] [-d DEVICE] [-c DATAFILE] [-i DATAFILE]
+                    [--mqtt-host MQTT_HOST] [--mqtt-port MQTT_PORT]
+                    [--mqtt-username MQTT_USERNAME]
+                    [--mqtt-password MQTT_PASSWORD] [--mqtt-topic MQTT_TOPIC]
+
+PowerCounter
+============
+
+Python based application to analyze the data of a electricity meter sent over
+an infrared LED using an USB UART adapter. The extracted data is sent via MQTT.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DEVICE, --device DEVICE
+                        The serial port device to open. Default: /dev/ttyUSB0.
+  -c DATAFILE, --capture DATAFILE
+                        Capture raw data from the serial port and store it in the given file.
+  -i DATAFILE, --input-file DATAFILE
+                        Instead of using a serial port, read the data from the specified data file (previously captured using the -c option).
+  --mqtt-host MQTT_HOST
+                        MQTT host. [Default: 192.168.1.70]
+  --mqtt-port MQTT_PORT
+                        MQTT port. [Default: 1883]
+  --mqtt-username MQTT_USERNAME
+                        MQTT username. [Default: mqtt]
+  --mqtt-password MQTT_PASSWORD
+                        MQTT password. [Default: mqtt]
+  --mqtt-topic MQTT_TOPIC
+                        MQTT topic. [Default: counters/power]
