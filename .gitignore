@@ -130,4 +130,13 @@ dmypy.json
 
 # Backup files
 *~
+
+# Temporary files
+.coverage-combined
+doc/combined-coverage/
+doc/functional-tests-coverage/
+doc/source/apidoc/
+doc/unittests-coverage/
+
+# Output files
 releases/

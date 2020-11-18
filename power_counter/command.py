@@ -18,6 +18,8 @@ Copyright:
 # -----------------------------------------------------------------------------
 import argparse
 
+from .capture import capture
+
 
 # -----------------------------------------------------------------------------
 # Module Variables
@@ -85,8 +87,11 @@ def power_counter():
         Returns True on success, otherwise False.
     """
     parser = get_parser()
-    _ = parser.parse_args()
+    args = parser.parse_args()
     success = True
+
+    if args.capture:
+        success = capture(args)
 
     return success
 
