@@ -73,10 +73,14 @@ def capture(args):
 
     num_bytes = 0
     while True:
-        byte_buffer = serial_dev.read(64)
-        output_fh.write(byte_buffer)
-        num_bytes += len(byte_buffer)
-        print("Read %d bytes...\r" % num_bytes)
+        try:
+            byte_buffer = serial_dev.read(64)
+            output_fh.write(byte_buffer)
+            num_bytes += len(byte_buffer)
+            print("Read %d bytes...\r" % num_bytes)
+        except KeyboardInterrupt:
+            print("\n\nFinishing capture.")
+            break
 
     return True
 
