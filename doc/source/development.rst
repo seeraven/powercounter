@@ -9,6 +9,7 @@ Development Documentation
    dev_unittests
    dev_workflow
    API Documentation <apidoc/power_counter>
+   uart_protocol
 
 
 Introduction

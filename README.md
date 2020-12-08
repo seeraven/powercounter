@@ -43,16 +43,17 @@ location of your choice, for example `/usr/local/bin`:
     sudo mv powercounter_Ubuntu18.04_amd64 /usr/local/bin/powercounter
 
 
-UART Protocol
--------------
+Debugging the Protocol
+----------------------
 
-The protocol of the electricity meter uses the Smart Message Language [SML] to
-transport the data. The specification of this protocol can be found on [BSI-SML]
-or explained for electricity meters on [Stefan Weigert - Das SML-Interface].
+For debugging the raw protocol sent over the serial line, you can first capture
+a data file by calling:
 
+    powercounter -c raw_data.dat
+
+And then analyse it by using it as an input file:
+
+    powercounter -i raw_data.dat
 
 
 [pyInstaller]: https://www.pyinstaller.org/
-[SML]: https://de.wikipedia.org/wiki/Smart_Message_Language
-[BSI-SML]: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR03109/TR-03109-1_Anlage_Feinspezifikation_Drahtgebundene_LMN-Schnittstelle_Teilb.pdf?__blob=publicationFile
-[Stefan Weigert - Das SML-Interface]: http://www.stefan-weigert.de/php_loader/sml.php

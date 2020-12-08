@@ -31,12 +31,12 @@ class CrcTest(TestCase):
     def test_single(self):
         """power_counter.crc.crc16_x25: Single entry buffer."""
         buffer = b'a'
-        self.assertEqual(power_counter.crc.crc16_x25(buffer), 0x82F7)
+        self.assertEqual(power_counter.crc.crc16_x25(buffer), 0xF782)
 
     def test_multiple(self):
         """power_counter.crc.crc16_x25: Multiple entry buffer."""
         buffer = b'123456789'
-        self.assertEqual(power_counter.crc.crc16_x25(buffer), 0x906E)
+        self.assertEqual(power_counter.crc.crc16_x25(buffer), 0x6E90)
 
 
 # -----------------------------------------------------------------------------

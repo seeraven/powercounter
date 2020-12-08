@@ -61,12 +61,13 @@ def crc16_x25(buffer):
         buffer (list): Byte-buffer.
 
     Return:
-        Returns the CRC16 X25 checksum.
+        Returns the CRC16 X25 checksum (byte swapped).
     """
     crcsum = 0xffff
     for byte in buffer:
         crcsum = CRC16_X25_TABLE[(byte ^ crcsum) & 0xff] ^ (crcsum >> 8 & 0xff)
     crcsum ^= 0xffff
+    crcsum = ((crcsum & 0xff00) >> 8) | ((crcsum & 0x00ff) << 8)
     return crcsum
 
 

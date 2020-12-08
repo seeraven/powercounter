@@ -18,7 +18,11 @@ Copyright:
 # -----------------------------------------------------------------------------
 import argparse
 
-from .capture import capture
+import serial
+
+from .capture import capture, get_serial
+from .sml_file import SmlFile
+from .sml_file_extractor import SmlFileExtractor
 
 
 # -----------------------------------------------------------------------------
@@ -92,6 +96,34 @@ def power_counter():
 
     if args.capture:
         success = capture(args)
+    else:
+        if args.input_file:
+            try:
+                input_fh = open(args.input_file, 'rb')
+            except OSError:
+                print("ERROR: Can't open input file %s!" % args.input_file)
+                return False
+        else:
+            try:
+                input_fh = get_serial(args)
+            except serial.serialutil.SerialException:
+                print("ERROR: Can't open serial device %s!" % args.device)
+                return False
+
+        extractor = SmlFileExtractor()
+        while True:
+            buffer = input_fh.read(128)
+            if not buffer and args.input_file:
+                break
+            files = extractor.add_bytes(buffer)
+            for file_data in files:
+                print("INFO: Extracted a new file of %d bytes:" % len(file_data))
+                sml_file = SmlFile(file_data)
+                print("      Extracted %d messages:" % len(sml_file.messages))
+                for message in sml_file.messages:
+                    print(message)
+
+        input_fh.close()
 
     return success
 
