@@ -44,7 +44,7 @@ class SmlMessage:
         Return:
             Returns the python datetime timestamp.
         """
-        if len(time_data) == 2:
+        if isinstance(time_data, list) and len(time_data) == 2:
             if time_data[0] == 1:
                 return int(time_data[1])
             if time_data[0] == 2:
@@ -136,13 +136,17 @@ class SmlMessageGetListResponse(SmlMessage):
 
         self.list_entries = []
         for item in self.message_body[1][4]:
+            if not isinstance(item, list):
+                continue
+
             obj_name = item[0]
-            if obj_name == b'\x01\x00\x01\x08\x00\xff':
-                obj_name = "1.8.0"
-            elif obj_name == b'\x01\x00\x02\x08\x00\xff':
-                obj_name = "2.8.0"
-            elif obj_name == b'\x01\x00\x10\x07\x00\xff':
-                obj_name = "16.7.0"
+            if len(obj_name) == 6:
+                obj_name = "%d-%d:%d.%d.%d*%d" % (obj_name[0],
+                                                  obj_name[1],
+                                                  obj_name[2],
+                                                  obj_name[3],
+                                                  obj_name[4],
+                                                  obj_name[5])
             status = item[1] if item[1] else 0
             val_time = self._convert_time(item[2])
             if val_time is None:

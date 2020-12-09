@@ -1,0 +1,16 @@
+usage: powercounter capture [-h] OUTPUT_FILE
+
+PowerCounter 'capture' command
+==============================
+
+Capture from the serial port and save the output in a file without any further
+processing.
+
+Example:
+    powercounter -d /dev/ttyUSB1 capture test.dat
+
+positional arguments:
+  OUTPUT_FILE  The output file to store the raw data.
+
+optional arguments:
+  -h, --help   show this help message and exit

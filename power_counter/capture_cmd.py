@@ -16,36 +16,32 @@ Copyright:
 # -----------------------------------------------------------------------------
 # Module Import
 # -----------------------------------------------------------------------------
+import argparse
 import atexit
 
-import serial
+from .serial_ifc import get_serial
+
+
+# -----------------------------------------------------------------------------
+# Module Variables
+# -----------------------------------------------------------------------------
+DESCRIPTION = """
+PowerCounter 'capture' command
+==============================
+
+Capture from the serial port and save the output in a file without any further
+processing.
+
+Example:
+    powercounter -d /dev/ttyUSB1 capture test.dat
+"""
 
 
 # -----------------------------------------------------------------------------
 # Functions
 # -----------------------------------------------------------------------------
-def get_serial(args):
-    """Get a serial.Serial() object.
-
-    Args:
-        args (obj) - The arguments object.
-
-    Return:
-        Returns an instance of the serial port object.
-    """
-    handle = serial.Serial(port=args.device,
-                           baudrate=9600,
-                           parity=serial.PARITY_NONE,
-                           stopbits=serial.STOPBITS_ONE,
-                           bytesize=serial.EIGHTBITS,
-                           timeout=None)
-    handle.reset_input_buffer()
-    handle.reset_output_buffer()
-    return handle
-
-
 def capture(args):
-    """Handle the capture function of powercounter.
+    """Handle the capture command of powercounter.
 
     Args:
         args (obj) - The command line arguments.
@@ -53,21 +49,19 @@ def capture(args):
     Return:
         Returns True on success, otherwise False.
     """
-    print("Saving data into file %s. Press Ctrl-C to stop." % args.capture)
+    print("Saving data into file %s. Press Ctrl-C to stop." % args.output_file)
 
     # Open serial port
-    try:
-        serial_dev = get_serial(args)
-    except serial.serialutil.SerialException:
-        print("ERROR: Can't open serial device %s!" % args.device)
+    serial_dev = get_serial(args)
+    if serial_dev is None:
         return False
     atexit.register(serial_dev.close)
 
     # Open output file
     try:
-        output_fh = open(args.capture, 'wb')
+        output_fh = open(args.output_file, 'wb')
     except OSError:
-        print("ERROR: Can't open output file %s!" % args.capture)
+        print("ERROR: Can't open output file %s!" % args.output_file)
         return False
     atexit.register(output_fh.close)
 
@@ -83,6 +77,23 @@ def capture(args):
             break
 
     return True
+
+
+def add_capture_parser(subparsers):
+    """Add the subparser for the capture command.
+
+    Args:
+        subparsers (obj): The subparsers object used to generate the subparsers.
+    """
+    capture_parser = subparsers.add_parser('capture',
+                                           description=DESCRIPTION,
+                                           formatter_class=argparse.RawTextHelpFormatter)
+    capture_parser.add_argument("output_file",
+                                metavar="OUTPUT_FILE",
+                                help="The output file to store the raw data.",
+                                action="store",
+                                default=None)
+    capture_parser.set_defaults(func=capture)
 
 
 # -----------------------------------------------------------------------------

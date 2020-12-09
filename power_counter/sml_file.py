@@ -112,14 +112,18 @@ class SmlFile:
             start_index = read_index
             read_index, message = self._get_next_field(read_index)
             if message and len(message) == 6:
-                calculated_crc = crc16_x25(self.data[start_index:read_index-4])
-                if calculated_crc != message[4]:
-                    print("ERROR: Calculated message CRC is 0x%04x, but provided is 0x%04x!" %
-                          (calculated_crc, message[4]))
+                if message[4]:
+                    calculated_crc = crc16_x25(self.data[start_index:read_index-4])
+                    if calculated_crc != message[4]:
+                        print("ERROR: Calculated message CRC is 0x%04x, but provided is 0x%04x!" %
+                              (calculated_crc, message[4]))
+                        continue
                 else:
-                    message_obj = get_message(message)
-                    if message_obj:
-                        self.messages.append(message_obj)
+                    print("WARNING: No message CRC provided!")
+
+                message_obj = get_message(message)
+                if message_obj:
+                    self.messages.append(message_obj)
 
 
 # -----------------------------------------------------------------------------

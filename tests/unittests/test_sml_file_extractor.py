@@ -12,6 +12,7 @@
 # -----------------------------------------------------------------------------
 # Module Import
 # -----------------------------------------------------------------------------
+import glob
 from unittest import TestCase
 
 import power_counter.sml_file_extractor
@@ -36,10 +37,10 @@ class SmlFileExtractorTest(TestCase):
         self.assertFalse(extractor.add_bytes(sml_file_start))
         self.assertFalse(extractor.add_bytes(sml_file_content))
 
-        messages = extractor.add_bytes(sml_file_end)
-        self.assertTrue(messages)
+        files = extractor.add_bytes(sml_file_end)
+        self.assertTrue(files)
         self.assertEqual(sml_file_start + sml_file_content + sml_file_end,
-                         messages[0])
+                         files[0])
 
         # Ensure that the next call uses an empty buffer
         self.assertFalse(extractor.add_bytes(b''))
@@ -55,13 +56,13 @@ class SmlFileExtractorTest(TestCase):
         sml_file_end = b'\x1b\x1b\x1b\x1b'        # escape sequence
         sml_file_end += b'\x1a\x01\x02\x03'       # end of message
 
-        messages = extractor.add_bytes(sml_file_start + sml_file_content_1 + sml_file_end +
-                                       sml_file_start + sml_file_content_2 + sml_file_end)
-        self.assertEqual(2, len(messages))
+        files = extractor.add_bytes(sml_file_start + sml_file_content_1 + sml_file_end +
+                                    sml_file_start + sml_file_content_2 + sml_file_end)
+        self.assertEqual(2, len(files))
         self.assertEqual(sml_file_start + sml_file_content_1 + sml_file_end,
-                         messages[0])
+                         files[0])
         self.assertEqual(sml_file_start + sml_file_content_2 + sml_file_end,
-                         messages[1])
+                         files[1])
 
     def test_escape(self):
         """power_counter.sml_file_extractor.SmlFileExtractor: Correct end on escaped data."""
@@ -79,9 +80,17 @@ class SmlFileExtractorTest(TestCase):
 
         sml_file = sml_file_start + sml_file_content + sml_file_end
 
-        messages = extractor.add_bytes(sml_file)
-        self.assertTrue(messages)
-        self.assertEqual(sml_file, messages[0])
+        files = extractor.add_bytes(sml_file)
+        self.assertTrue(files)
+        self.assertEqual(sml_file, files[0])
+
+    def test_on_files(self):
+        """power_counter.sml_file_extractor.SmlFileExtractor: Data from libsml-testing files."""
+        for filename in glob.glob("../libsml-testing/*.bin"):
+            extractor = power_counter.sml_file_extractor.SmlFileExtractor()
+            data = open(filename, 'rb').read()
+            files = extractor.add_bytes(data)
+            self.assertTrue(files, msg="Testing content of file %s" % filename)
 
 
 # -----------------------------------------------------------------------------

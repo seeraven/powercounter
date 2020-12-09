@@ -1,0 +1,13 @@
+usage: powercounter print [-h]
+
+PowerCounter 'print' command
+============================
+
+Capture from the serial port (or input file) and parse the data to print it
+on stdout.
+
+Example:
+    powercounter -d /dev/ttyUSB1 print
+
+optional arguments:
+  -h, --help  show this help message and exit

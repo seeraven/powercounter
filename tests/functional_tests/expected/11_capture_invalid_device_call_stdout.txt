@@ -1,0 +1,2 @@
+Saving data into file /tmp/powercounter.raw. Press Ctrl-C to stop.
+ERROR: Can't open serial device /dev/do_not_exists!
