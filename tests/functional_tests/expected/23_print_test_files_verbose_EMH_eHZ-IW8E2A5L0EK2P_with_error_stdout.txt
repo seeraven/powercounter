@@ -1,0 +1,187 @@
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe80\x1f', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992111, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992111, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992111, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992111, Unit=Wh, Scaler=10^-1, Value=27956927, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992111, Unit=Wh, Scaler=10^-1, Value=27956927, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992111, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992111, Unit=W, Scaler=10^-1, Value=1367, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992111, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992111, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795692.700 Wh
+1-0:1.8.1*255: 2795692.700 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.700 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe80!', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992114, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992114, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992114, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992114, Unit=Wh, Scaler=10^-1, Value=27956928, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992114, Unit=Wh, Scaler=10^-1, Value=27956928, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992114, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992114, Unit=W, Scaler=10^-1, Value=1368, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992114, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992114, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795692.800 Wh
+1-0:1.8.1*255: 2795692.800 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.800 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe80#', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992116, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992116, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992116, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992116, Unit=Wh, Scaler=10^-1, Value=27956929, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992116, Unit=Wh, Scaler=10^-1, Value=27956929, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992116, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992116, Unit=W, Scaler=10^-1, Value=1365, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992116, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992117, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795692.900 Wh
+1-0:1.8.1*255: 2795692.900 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.500 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe80%', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992119, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992119, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992119, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992119, Unit=Wh, Scaler=10^-1, Value=27956930, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992119, Unit=Wh, Scaler=10^-1, Value=27956930, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992119, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992119, Unit=W, Scaler=10^-1, Value=1366, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992119, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992119, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795693.000 Wh
+1-0:1.8.1*255: 2795693.000 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.600 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b"\x00\r\x01\xe80'", ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992122, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992122, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992122, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992122, Unit=Wh, Scaler=10^-1, Value=27956931, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992122, Unit=Wh, Scaler=10^-1, Value=27956931, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992122, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992122, Unit=W, Scaler=10^-1, Value=1368, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992122, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992122, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795693.100 Wh
+1-0:1.8.1*255: 2795693.100 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.800 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe80)', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992124, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992124, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992124, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992124, Unit=Wh, Scaler=10^-1, Value=27956932, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992124, Unit=Wh, Scaler=10^-1, Value=27956932, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992124, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992124, Unit=W, Scaler=10^-1, Value=1362, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992124, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992124, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795693.200 Wh
+1-0:1.8.1*255: 2795693.200 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.200 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe80+', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992127, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992127, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992127, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992127, Unit=Wh, Scaler=10^-1, Value=27956933, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992127, Unit=Wh, Scaler=10^-1, Value=27956933, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992127, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992127, Unit=W, Scaler=10^-1, Value=1366, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992127, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992127, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795693.300 Wh
+1-0:1.8.1*255: 2795693.300 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.600 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe80-', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992129, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992129, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992129, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992129, Unit=Wh, Scaler=10^-1, Value=27956934, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992129, Unit=Wh, Scaler=10^-1, Value=27956934, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992129, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992129, Unit=W, Scaler=10^-1, Value=1365, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992129, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992130, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795693.400 Wh
+1-0:1.8.1*255: 2795693.400 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.500 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe80/', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992132, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992132, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992132, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992132, Unit=Wh, Scaler=10^-1, Value=27956935, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992132, Unit=Wh, Scaler=10^-1, Value=27956935, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992132, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992132, Unit=W, Scaler=10^-1, Value=1364, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992132, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992132, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795693.500 Wh
+1-0:1.8.1*255: 2795693.500 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.400 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe801', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992135, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992135, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992135, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992135, Unit=Wh, Scaler=10^-1, Value=27956936, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992135, Unit=Wh, Scaler=10^-1, Value=27956936, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992135, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992135, Unit=W, Scaler=10^-1, Value=1366, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992135, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992135, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795693.600 Wh
+1-0:1.8.1*255: 2795693.600 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.600 W
+WARNING: No message CRC provided!
+INFO: Extracted a new file of 360 bytes:
+      Extracted 2 messages:
+SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\r\x01\xe803', ServerId=b'\x06EMH\x01\x07\x19|$V', RefTime=None, SmlVersion=1
+SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x07\x19|$V', ListName=b'\x01\x00b\n\xff\xff', ActSensorTime=31992137, ListSignature=None, ActGatewayTime=None
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=31992137, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=31992137, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x07\x19|$V', ValueSignature=b''
+ - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=31992137, Unit=Wh, Scaler=10^-1, Value=27956937, ValueSignature=b''
+ - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=31992137, Unit=Wh, Scaler=10^-1, Value=27956937, ValueSignature=b''
+ - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=31992137, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
+ - ObjName=1-0:16.7.0*255, Status=0x0, ValTime=31992137, Unit=W, Scaler=10^-1, Value=1364, ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=31992137, Unit=None, Scaler=10^1, Value=b'\x8bj\x0en\x12\xf5\xd9\x80\xf70\xb6\xbd^\x19A\x83N\xb0\xe4>Jc#\xd9\x99%\x95V\xf5\xe5n\x04\x04\x98\xc8\x978\xf0\xf6\xdf\xf8x[\x04]\x84\xe0\xd6\x01', ValueSignature=[b'\x01\x00`2\x02\x04', b'', b'', b'', b'', 637, b'']
+ - ObjName=1-0:96.50.2*6, Status=0x0, ValTime=31992138, Unit=None, Scaler=10^1, Value=b'', ValueSignature=b''
+1-0:1.8.0*255: 2795693.700 Wh
+1-0:1.8.1*255: 2795693.700 Wh
+1-0:1.8.2*255: 0.000 Wh
+1-0:16.7.0*255: 136.400 W

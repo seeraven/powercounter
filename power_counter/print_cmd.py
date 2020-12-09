@@ -22,6 +22,7 @@ import atexit
 from .serial_ifc import get_serial
 from .sml_file import SmlFile
 from .sml_file_extractor import SmlFileExtractor
+from .sml_message import SmlMessageGetListResponse
 
 
 # -----------------------------------------------------------------------------
@@ -66,17 +67,25 @@ def print_cmd(args):
     atexit.register(input_fh.close)
 
     extractor = SmlFileExtractor()
+    # pylint: disable=too-many-nested-blocks
     while True:
         buffer = input_fh.read(128)
         if not buffer and args.input_file:
             break
         files = extractor.add_bytes(buffer)
         for file_data in files:
-            print("INFO: Extracted a new file of %d bytes:" % len(file_data))
             sml_file = SmlFile(file_data)
-            print("      Extracted %d messages:" % len(sml_file.messages))
+            if args.verbose:
+                print("INFO: Extracted a new file of %d bytes:" % len(file_data))
+                print("      Extracted %d messages:" % len(sml_file.messages))
+                for message in sml_file.messages:
+                    print(message)
             for message in sml_file.messages:
-                print(message)
+                if isinstance(message, SmlMessageGetListResponse):
+                    for obj_name, _, _, unit, scaler, value, _ in message.list_entries:
+                        if unit in ['Wh', 'W']:
+                            scaled_value = float(value) * pow(10, scaler)
+                            print("%s: %.3f %s" % (obj_name, scaled_value, unit))
 
     input_fh.close()
     return True
@@ -91,6 +100,11 @@ def add_print_parser(subparsers):
     print_parser = subparsers.add_parser('print',
                                          description=DESCRIPTION,
                                          formatter_class=argparse.RawTextHelpFormatter)
+    print_parser.add_argument("-v", "--verbose",
+                              help="Print the extracted SML data in addition to "
+                              "the extracted OBIS data.",
+                              action="store_true",
+                              default=False)
     print_parser.set_defaults(func=print_cmd)
 
 
