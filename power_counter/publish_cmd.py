@@ -19,7 +19,9 @@ Copyright:
 import argparse
 import atexit
 
+from .mqtt_ifc import MqttInterface
 from .serial_ifc import get_serial
+from .sml_message_processor import process
 
 
 # -----------------------------------------------------------------------------
@@ -63,6 +65,14 @@ def publish(args):
 
     atexit.register(input_fh.close)
 
+    mqtt = MqttInterface(args)
+
+    def obis_data_cb(obj_name, value, unit):
+        print("%s: %.3f %s" % (obj_name, value, unit))
+
+    process(args, input_fh, None, obis_data_cb)
+
+    mqtt.close()
     input_fh.close()
     return True
 

@@ -20,9 +20,7 @@ import argparse
 import atexit
 
 from .serial_ifc import get_serial
-from .sml_file import SmlFile
-from .sml_file_extractor import SmlFileExtractor
-from .sml_message import SmlMessageGetListResponse
+from .sml_message_processor import process
 
 
 # -----------------------------------------------------------------------------
@@ -66,26 +64,17 @@ def print_cmd(args):
 
     atexit.register(input_fh.close)
 
-    extractor = SmlFileExtractor()
-    # pylint: disable=too-many-nested-blocks
-    while True:
-        buffer = input_fh.read(128)
-        if not buffer and args.input_file:
-            break
-        files = extractor.add_bytes(buffer)
-        for file_data in files:
-            sml_file = SmlFile(file_data)
-            if args.verbose:
-                print("INFO: Extracted a new file of %d bytes:" % len(file_data))
-                print("      Extracted %d messages:" % len(sml_file.messages))
-                for message in sml_file.messages:
-                    print(message)
+    def sml_file_cb(file_data, sml_file):
+        if args.verbose:
+            print("INFO: Extracted a new file of %d bytes:" % len(file_data))
+            print("      Extracted %d messages:" % len(sml_file.messages))
             for message in sml_file.messages:
-                if isinstance(message, SmlMessageGetListResponse):
-                    for obj_name, _, _, unit, scaler, value, _ in message.list_entries:
-                        if unit in ['Wh', 'W']:
-                            scaled_value = float(value) * pow(10, scaler)
-                            print("%s: %.3f %s" % (obj_name, scaled_value, unit))
+                print(message)
+
+    def obis_data_cb(obj_name, value, unit):
+        print("%s: %.3f %s" % (obj_name, value, unit))
+
+    process(args, input_fh, sml_file_cb, obis_data_cb)
 
     input_fh.close()
     return True
