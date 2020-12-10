@@ -158,7 +158,7 @@ class SmlMessageGetListResponse(SmlMessage):
                 unit = "W"
             elif item[3]:
                 unit = int(item[3])
-            scaler = item[4] if item[4] else 1
+            scaler = item[4] if item[4] else 0
             value = item[5]
             value_signature = item[6]
             self.list_entries.append([obj_name, status, val_time, unit, scaler,

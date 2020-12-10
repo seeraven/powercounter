@@ -68,7 +68,7 @@ def publish(args):
     mqtt = MqttInterface(args)
 
     def obis_data_cb(obj_name, value, unit):
-        print("%s: %.3f %s" % (obj_name, value, unit))
+        mqtt.publish(obj_name, value)
 
     process(args, input_fh, None, obis_data_cb)
 
@@ -103,10 +103,11 @@ def add_publish_parser(subparsers):
                                 help="MQTT password. [Default: %(default)s]",
                                 action="store",
                                 default="mqtt")
-    publish_parser.add_argument("--mqtt-topic",
-                                help="MQTT topic. [Default: %(default)s]",
+    publish_parser.add_argument("--mqtt-topics",
+                                help="Comma separated list of OBIS IDs and the "
+                                "corresponding MQTT topic. [Default: %(default)s]",
                                 action="store",
-                                default="counters/power")
+                                default="1-0:1.8.0*255=power/total,1-0:16.7.0*255=power/rate")
     publish_parser.set_defaults(func=publish)
 
 

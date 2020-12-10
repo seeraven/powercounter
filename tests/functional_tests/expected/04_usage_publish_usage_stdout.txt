@@ -2,7 +2,7 @@ usage: powercounter publish [-h] [--mqtt-host MQTT_HOST]
                             [--mqtt-port MQTT_PORT]
                             [--mqtt-username MQTT_USERNAME]
                             [--mqtt-password MQTT_PASSWORD]
-                            [--mqtt-topic MQTT_TOPIC]
+                            [--mqtt-topics MQTT_TOPICS]
 
 PowerCounter 'publish' command
 ==============================
@@ -23,5 +23,5 @@ optional arguments:
                         MQTT username. [Default: mqtt]
   --mqtt-password MQTT_PASSWORD
                         MQTT password. [Default: mqtt]
-  --mqtt-topic MQTT_TOPIC
-                        MQTT topic. [Default: counters/power]
+  --mqtt-topics MQTT_TOPICS
+                        Comma separated list of OBIS IDs and the corresponding MQTT topic. [Default: 1-0:1.8.0*255=power/total,1-0:16.7.0*255=power/rate]
