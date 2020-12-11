@@ -2,10 +2,10 @@ INFO: Extracted a new file of 220 bytes:
       Extracted 3 messages:
 SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'Hag\x08B\x19\xad', ServerId=b'1001185', RefTime=None, SmlVersion=1
 SML-Message GetListResponse: ClientId=None, ServerId=b'1001185', ListName=None, ActSensorTime=None, ListSignature=None, ActGatewayTime=None
- - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=None, Unit=None, Scaler=10^1, Value=b'HAGER', ValueSignature=b''
- - ObjName=1-0:0.0.0*255, Status=0x0, ValTime=None, Unit=None, Scaler=10^1, Value=b'1001185', ValueSignature=b''
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=None, Unit=None, Scaler=10^0, Value=b'HAGER', ValueSignature=b''
+ - ObjName=1-0:0.0.0*255, Status=0x0, ValTime=None, Unit=None, Scaler=10^0, Value=b'1001185', ValueSignature=b''
  - ObjName=1-0:2.8.1*255, Status=0x82, ValTime=None, Unit=Wh, Scaler=10^-1, Value=1103403151, ValueSignature=b''
- - ObjName=0-0:96.1.255*255, Status=0x0, ValTime=None, Unit=None, Scaler=10^1, Value=b'0000116917', ValueSignature=b''
+ - ObjName=0-0:96.1.255*255, Status=0x0, ValTime=None, Unit=None, Scaler=10^0, Value=b'0000116917', ValueSignature=b''
  - ObjName=1-0:1.7.1*255, Status=0x82, ValTime=None, Unit=W, Scaler=10^-4, Value=-56321916, ValueSignature=b''
 SML-Message CloseResponse: GlobalSignature=None
 1-0:2.8.1*255: 110340315.100 Wh

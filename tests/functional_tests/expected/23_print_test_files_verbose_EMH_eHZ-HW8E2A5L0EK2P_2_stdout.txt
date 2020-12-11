@@ -3,13 +3,13 @@ INFO: Extracted a new file of 316 bytes:
       Extracted 2 messages:
 SML-Message OpenResponse: Codepage=iso-8859-15, ClientId=b'', ReqFileId=b'\x00\x19\x0e\xa6\xa3\x00', ServerId=b'\x06EMH\x01\x02qX Q', RefTime=None, SmlVersion=1
 SML-Message GetListResponse: ClientId=None, ServerId=b'\x06EMH\x01\x02qX Q', ListName=None, ActSensorTime=245817516, ListSignature=None, ActGatewayTime=None
- - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=245817516, Unit=None, Scaler=10^1, Value=b'EMH', ValueSignature=b''
- - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=245817516, Unit=None, Scaler=10^1, Value=b'\x06EMH\x01\x02qX Q', ValueSignature=b''
+ - ObjName=129-129:199.130.3*255, Status=0x0, ValTime=245817516, Unit=None, Scaler=10^0, Value=b'EMH', ValueSignature=b''
+ - ObjName=1-0:0.0.9*255, Status=0x0, ValTime=245817516, Unit=None, Scaler=10^0, Value=b'\x06EMH\x01\x02qX Q', ValueSignature=b''
  - ObjName=1-0:1.8.0*255, Status=0x182, ValTime=245817516, Unit=Wh, Scaler=10^-1, Value=133124849, ValueSignature=b''
  - ObjName=1-0:1.8.1*255, Status=0x0, ValTime=245817516, Unit=Wh, Scaler=10^-1, Value=133124849, ValueSignature=b''
  - ObjName=1-0:1.8.2*255, Status=0x0, ValTime=245817516, Unit=Wh, Scaler=10^-1, Value=0, ValueSignature=b''
  - ObjName=1-0:15.7.0*255, Status=0x0, ValTime=245817516, Unit=W, Scaler=10^-1, Value=1394, ValueSignature=b''
- - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=245817516, Unit=None, Scaler=10^1, Value=b"\x19\x92\x1aRed\xac\xba\xe3\x02na5&u\xec('f\x83\xf0-\xbb2\xfap\x1e:u;4!\x8bdf\xb1Pd\xdfY\x19\xf9\xf1?\x84\xb5\xb2\xc9\x01", ValueSignature=b''
+ - ObjName=129-129:199.130.5*255, Status=0x0, ValTime=245817516, Unit=None, Scaler=10^0, Value=b"\x19\x92\x1aRed\xac\xba\xe3\x02na5&u\xec('f\x83\xf0-\xbb2\xfap\x1e:u;4!\x8bdf\xb1Pd\xdfY\x19\xf9\xf1?\x84\xb5\xb2\xc9\x01", ValueSignature=b''
 1-0:1.8.0*255: 13312484.900 Wh
 1-0:1.8.1*255: 13312484.900 Wh
 1-0:1.8.2*255: 0.000 Wh
