@@ -41,7 +41,7 @@ endif
 #  DEFAULT TARGETS
 # ----------------------------------------------------------------------------
 
-.PHONY: help system-setup venv-bash run check-style pylint pycodestyle flake8 tests tests-coverage unittests unittests-coverage functional-tests functional-tests-coverage apidoc doc man pyinstaller clean
+.PHONY: help system-setup venv-bash run check-style pylint pycodestyle flake8 tests tests-coverage unittests unittests-coverage functional-tests functional-tests-coverage apidoc doc man pyinstaller clean distclean
 
 all:	check-style.venv tests-coverage.venv doc.venv man.venv
 
@@ -105,6 +105,7 @@ help:
 	@echo " system-setup              : Install all dependencies in the currently"
 	@echo "                             active environment (system or venv)."
 	@echo " clean                     : Remove all temporary files."
+	@echo " distclean                 : Remove all temporary files and the release folder."
 	@echo
 	@echo "Development Information:"
 	@echo " MODULES    = $(MODULES)"
@@ -306,11 +307,12 @@ releases/powercounter_Ubuntu20.04_amd64:
 clean:
 	@rm -rf venv doc/*coverage doc/build doc/source/apidoc .coverage .coverage-*
 	@rm -rf dist build *.spec
-	@rm -rf releases
 	@find . -name "__pycache__" -exec rm -rf {} \; 2>/dev/null || true
 	@find . -iname "*~" -exec rm -f {} \;
 	@find . -iname "*.pyc" -exec rm -f {} \;
 
+distclean: clean
+	@rm -rf releases
 
 
 # ----------------------------------------------------------------------------
