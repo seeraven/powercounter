@@ -107,7 +107,7 @@ def add_publish_parser(subparsers):
                                 help="Comma separated list of OBIS IDs and the "
                                 "corresponding MQTT topic. [Default: %(default)s]",
                                 action="store",
-                                default="1-0:1.8.0*255=power/total,1-0:16.7.0*255=power/rate")
+                                default="1-0:1.8.0*255=power/total,1-0:16.7.0*255=power/rate,1-0:2.8.0*255=power/feed-total")
     publish_parser.set_defaults(func=publish)
 
 

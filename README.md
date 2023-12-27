@@ -49,11 +49,11 @@ Debugging the Protocol
 For debugging the raw protocol sent over the serial line, you can first capture
 a data file by calling:
 
-    powercounter -c raw_data.dat
+    powercounter capture raw_data.dat
 
 And then analyse it by using it as an input file:
 
-    powercounter -i raw_data.dat
+    powercounter -i raw_data.dat print
 
 
 [pyInstaller]: https://www.pyinstaller.org/
