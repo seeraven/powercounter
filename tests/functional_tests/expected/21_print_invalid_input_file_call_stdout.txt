@@ -1,1 +1,0 @@
-ERROR: Can't open input file /dev/do_not_exists!

@@ -1,2 +1,0 @@
-usage: powercounter capture [-h] OUTPUT_FILE
-powercounter capture: error: the following arguments are required: OUTPUT_FILE
