@@ -1,0 +1,10 @@
+build/
+dist/
+doc/
+.dockerstamps/
+.git/
+.mypy_cache/
+releases/
+*.spec
+*~
+*.bak

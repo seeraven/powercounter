@@ -1,1 +1,0 @@
-ERROR: Can't open serial device /dev/do_not_exists!

@@ -1,3 +1,0 @@
-ERROR: SML-file has invalid CRC (Calculated: 0xa649, Provided: 0x4a43)
-INFO: Extracted a new file of 224 bytes:
-      Extracted 0 messages:
