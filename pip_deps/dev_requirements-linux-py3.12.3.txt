@@ -38,10 +38,6 @@ domdf-python-tools==3.9.0
     # via
     #   dom-toml
     #   sphinx-pyproject
-exceptiongroup==1.2.2
-    # via
-    #   ipython
-    #   pytest
 executing==2.1.0
     # via stack-data
 flake8==7.1.1
@@ -184,16 +180,7 @@ sphinxcontrib-serializinghtml==2.0.0
 stack-data==0.6.3
     # via ipython
 tomli==2.2.1
-    # via
-    #   black
-    #   coverage
-    #   dom-toml
-    #   flake8-black
-    #   flake8-pyproject
-    #   mypy
-    #   pylint
-    #   pytest
-    #   sphinx
+    # via dom-toml
 tomlkit==0.13.2
     # via pylint
 traitlets==5.14.3
@@ -204,10 +191,7 @@ types-mock==5.1.0.20240425
     # via powercounter (pyproject.toml)
 typing-extensions==4.12.2
     # via
-    #   astroid
-    #   black
     #   domdf-python-tools
-    #   ipython
     #   mypy
 urllib3==2.3.0
     # via requests

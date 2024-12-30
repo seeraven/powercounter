@@ -15,7 +15,7 @@ Copyright:
 # Module Import
 # -----------------------------------------------------------------------------
 import logging
-from typing import List
+from typing import List, Optional
 
 # -----------------------------------------------------------------------------
 # Logger
@@ -36,6 +36,19 @@ WAIT_FOR_END = 1
 ESCAPE_SEQUENCE = b"\x1b\x1b\x1b\x1b"
 VERSION_SEQUENCE = b"\x01\x01\x01\x01"
 END_START = b"\x1a"
+
+
+# -----------------------------------------------------------------------------
+# Functions
+# -----------------------------------------------------------------------------
+def find_at_four_bytes(buffer: bytes, sequence: bytes, start: Optional[int]) -> int:
+    """Find a sequence starting only at multiple of 4 bytes."""
+    idx = buffer.find(sequence, start)
+    offset = idx % 4
+    while (offset != 0) and (idx >= 0):
+        idx = buffer.find(sequence, idx + (4 - offset))  # start at next 4 bytes
+        offset = idx % 4
+    return idx
 
 
 # -----------------------------------------------------------------------------
@@ -79,7 +92,7 @@ class SmlFileExtractor:
                     )
 
             if self.state == WAIT_FOR_END:
-                cand_idx = self.buffer.find(ESCAPE_SEQUENCE, 8)
+                cand_idx = find_at_four_bytes(self.buffer, ESCAPE_SEQUENCE, 8)
                 # Ensure the full end marker is part of the buffer
                 while (cand_idx >= 0) and ((cand_idx + 8) <= len(self.buffer)):
                     if self.buffer[cand_idx:].startswith(ESCAPE_SEQUENCE + ESCAPE_SEQUENCE):
@@ -99,15 +112,15 @@ class SmlFileExtractor:
                     if self.buffer[cand_idx:].startswith(ESCAPE_SEQUENCE + VERSION_SEQUENCE):
                         LOGGER.error("Expected end marker but found message start marker at index %d!", cand_idx)
                         self.buffer = self.buffer[cand_idx:]
-                        cand_idx = self.buffer.find(ESCAPE_SEQUENCE, 8)
+                        cand_idx = find_at_four_bytes(self.buffer, ESCAPE_SEQUENCE, 8)
                         continue
 
                     LOGGER.error(
                         "Found escape sequence at index %d that is not followed "
-                        "by another escape sequence or the end marker!",
+                        "by another escape sequence, an end marker or a start marker!",
                         cand_idx,
                     )
-                    cand_idx = self.buffer.find(ESCAPE_SEQUENCE, 4)
+                    cand_idx = find_at_four_bytes(self.buffer, ESCAPE_SEQUENCE, cand_idx + 4)
 
         LOGGER.debug(
             "Returning %d SML messages encoded as bytes. %d bytes remain in the internal buffer.",
