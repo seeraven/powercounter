@@ -134,20 +134,21 @@ class SmlFile:
             start_index = read_index
             read_index, message = self._get_next_field(read_index)
             LOGGER.debug("Extracted fields from buffer index %d to %d.", start_index, read_index)
-            sml_message = SmlRawMessageData.from_field_list(message)
-            if sml_message:
-                if sml_message.crc16:
-                    crc_end_index = read_index - 4
-                    calculated_crc = crc16_x25(self.data[start_index:crc_end_index])
-                    if calculated_crc != sml_message.crc16:
-                        LOGGER.error(
-                            "Calculated message CRC is 0x%04x, but provided is 0x%04x!",
-                            calculated_crc,
-                            sml_message.crc16,
-                        )
-                        continue
-                else:
-                    LOGGER.warning("No message CRC provided!")
-                message_obj = get_message(sml_message)
-                if message_obj:
-                    self.messages.append(message_obj)
+            if isinstance(message, list):
+                sml_message = SmlRawMessageData.from_field_list(message)
+                if sml_message:
+                    if sml_message.crc16:
+                        crc_end_index = read_index - 4
+                        calculated_crc = crc16_x25(self.data[start_index:crc_end_index])
+                        if calculated_crc != sml_message.crc16:
+                            LOGGER.error(
+                                "Calculated message CRC is 0x%04x, but provided is 0x%04x!",
+                                calculated_crc,
+                                sml_message.crc16,
+                            )
+                            continue
+                    else:
+                        LOGGER.warning("No message CRC provided!")
+                    message_obj = get_message(sml_message)
+                    if message_obj:
+                        self.messages.append(message_obj)
