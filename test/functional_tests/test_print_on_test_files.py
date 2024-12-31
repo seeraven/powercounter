@@ -5,6 +5,7 @@
 # ----------------------------------------------------------------------------
 import subprocess
 from pathlib import Path
+from typing import List
 
 # ----------------------------------------------------------------------------
 #  LIBSML-TESTING DIRECTORY
@@ -33,34 +34,7 @@ FILES_WITH_CRC_WARNINGS = [
 
 # Files where we expect a '[ERROR]: Data for SmlRawMessageData must be of type list,
 # but the given input type was <class 'bytes'>.'
-FILED_WITH_MSG_TYPE_ERROR = [
-    "DrNeuhaus_SMARTY_ix-130.bin",
-    "DZG_DVS-7412.2_jmberg.bin",
-    "DZG_DVS-7420.2V.G2_mtr0.bin",
-    "DZG_DVS-7420.2V.G2_mtr1.bin",
-    "DZG_DVS-7420.2V.G2_mtr2.bin",
-    "DZG_DVS-7420.2V.G2_mtr2_neg.bin",
-    "dzg_dwsb20_2th_2byte.bin",
-    "dzg_dwsb20_2th_3byte.bin",
-    "eBZ_DD3_DD32R06DTA-SMZ1.bin",
-    "eBZ_DD3_DD3BZ06DTA-SMZ1_without_PIN.bin",
-    "EMH-ED300L_consumption.bin",
-    "EMH-ED300L_delivery.bin",
-    "EMH_eHZ361L5R_1.bin",
-    "EMH_eHZ361L5R.bin",
-    "EMH_eHZ-GW8E2A500AK2.bin",
-    "EMH_eHZ-HW8E2A5L0EK2P_1.bin",
-    "EMH_eHZ-HW8E2A5L0EK2P_2.bin",
-    "EMH_eHZ-HW8E2A5L0EK2P.bin",
-    "EMH_eHZ-IW8E2AWL0EK2P.bin",
-    "EMH_mME40-AE6AKF0K0.bin",
-    "HOLLEY_DTZ541-ZDBA.bin",
-    "ISKRA_MT631-D2A51-V22-K0z_without_PIN.bin",
-    "ISKRA_MT691_eHZ-MS2020.bin",
-    "ITRON_OpenWay-3.HZ.bin",
-    "ITRON_OpenWay-3.HZ_without_PIN.bin",
-    "ITRON_OpenWay-3.HZ_with_PIN.bin",
-]
+FILED_WITH_MSG_TYPE_ERROR: List[str] = []
 
 # Files where we expect a '[ERROR]: Expected end marker but found message start marker'
 FILES_WITH_MARKER_ERRORS = ["DZG_DVS-7420.2V.G2_mtr1_error.bin"]
